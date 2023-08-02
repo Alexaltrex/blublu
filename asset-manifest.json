@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/blublu/static/css/main.96655d3e.css",
+    "main.js": "/blublu/static/js/main.5448a556.js",
+    "static/js/787.e9eab08a.chunk.js": "/blublu/static/js/787.e9eab08a.chunk.js",
+    "static/media/logo.png": "/blublu/static/media/logo.83de4dba1a755868e535.png",
+    "index.html": "/blublu/index.html",
+    "main.96655d3e.css.map": "/blublu/static/css/main.96655d3e.css.map",
+    "main.5448a556.js.map": "/blublu/static/js/main.5448a556.js.map",
+    "787.e9eab08a.chunk.js.map": "/blublu/static/js/787.e9eab08a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96655d3e.css",
+    "static/js/main.5448a556.js"
+  ]
+}
