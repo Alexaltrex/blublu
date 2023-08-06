@@ -1,0 +1,344 @@
+@import "../../assets/styles/app";
+
+.roadmap {
+  position: relative;
+  background: #000;
+
+  .title {
+    position: absolute;
+    z-index: 3;
+    width: 261px;
+    height: 185.266px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include tablet {
+      width: 362px;
+      height: 273px;
+      top: 147px;
+      left: 76px;
+      transform: none;
+    }
+
+    @include desktop {
+      top: 213px;
+      left: 57px;
+    }
+
+  }
+
+  .dots_tablet {
+    @include onlyTablet();
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .dots_desktop {
+    @include onlyDesktopAndMore();
+    width: auto; //586px;
+    position: absolute;
+    z-index: 2;
+    top: -65px;
+    left: 0;
+    height: 100vh;
+    object-fit: cover;
+    object-position: right;
+  }
+
+  .gradient_top {
+    @include onlyMobileAndLess();
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 87px;
+    right: 0;
+    height: 118px;
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+  }
+
+  .video {
+    position: absolute;
+    z-index: 1;
+    top: 87px;
+    left: 0;
+    width: 100%;
+    height: 733px;
+    object-fit: cover;
+    object-position: top;
+
+    @include tablet {
+      top: 0;
+      height: 100%;
+
+      //object-position: top;
+    }
+
+    @include desktop {
+      //object-position: top;
+    }
+  }
+
+  .gradient_bottom {
+    @include onlyMobileAndLess();
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 703px;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+  }
+
+  .mobile_bottom_blur {
+    @include onlyMobileAndLess();
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 573px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+
+  .mobileContent {
+    @include onlyMobileAndLess(flex);
+    flex-direction: column;
+    padding-bottom: 101px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .tabletContent {
+    @include onlyTablet(flex);
+    flex-direction: column;
+    padding-bottom: 24px;
+    position: relative;
+    z-index: 2;
+
+    .row_top {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 45px;
+      margin-right: 42px;
+    }
+
+    .row_bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 52px;
+      margin-left: 7px;
+      margin-right: 30px;
+    }
+  }
+
+  .desktopContent {
+    @include onlyDesktopAndMore(flex);
+    justify-content: space-between;
+    min-height: calc(100vh - 64px);
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+
+    .leftColumn {
+      margin-left: 48px;
+      display: flex;
+      flex-direction: column;
+
+
+    }
+
+    .rightColumn {
+      margin-top: 18px;
+      margin-right: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+    }
+  }
+
+  .player {
+    align-self: center;
+    margin-top: 536px;
+
+    @include tablet {
+      align-self: normal;
+      margin-top: 0;
+    }
+
+    @include desktop {
+      margin-top: 38px;
+    }
+  }
+
+  .paperClip {
+    margin-top: 38px;
+    align-self: center;
+
+    @include tablet {
+      align-self: flex-end;
+      margin-top: 569px;
+      margin-right: 70px;
+    }
+
+    @include desktop {
+      margin-top: 44px;
+      margin-left: 360px;
+      margin-right: 0;
+    }
+
+
+  }
+
+  .vision {
+    align-self: center;
+    width: 288px;
+    height: 109px;
+    margin-top: 53px;
+
+    @include tablet {
+      align-self: flex-end;
+      width: 288px;
+      height: 109px;
+      margin-top: -16px;
+      margin-right: 24px;
+    }
+
+    @include desktop {
+      align-self: normal;
+      width: 627px;
+      height: 237px;
+      margin-left: 10px;
+      margin-top: 196px;
+    }
+  }
+
+  .presale {
+    width: 288px;
+    height: 115px;
+    align-self: center;
+    margin-top: 38px;
+
+    @include tablet {
+      width: 579px;
+      height: 230px;
+      align-self: normal;
+      margin-top: 27px;
+    }
+
+    @include desktop {
+      width: 579px;
+      height: 230px;
+      margin-top: 13px;
+    }
+  }
+
+  .community {
+    width: 288px;
+    height: 94px;
+    align-self: center;
+    margin-top: 38px;
+
+    @include tablet {
+      width: 747px;
+      height: 246px;
+      align-self: flex-start;
+      margin-left: 25px;
+      margin-top: -70px;
+    }
+
+    @include desktop {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      width: 747px;
+      height: 246px;
+      transform: translateX(-50%);
+      margin: 0;
+    }
+
+    & > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .check_out {
+    align-self: center;
+    width: 288px;
+    height: 84px;
+    margin-top: 38px;
+
+    @include tablet {
+      width: 511px;
+      height: 150px;
+      margin-top: -50px;
+      margin-left: 44px;
+      align-self: flex-start;
+    }
+
+    @include desktop {
+      margin-top: 30px;
+      margin-left: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      img {
+        transform: scale(0.9);
+      }
+    }
+
+
+  }
+
+  .socials {
+    align-self: center;
+    margin-top: 40px;
+
+    @include tablet {
+      align-self: normal;
+      margin-top: 0;
+
+    }
+
+    @include desktop {
+      margin-right: 26px;
+    }
+  }
+
+  .marketing {
+    width: 288px;
+    height: 111px;
+    align-self: center;
+    margin-top: 38px;
+
+    @include tablet {
+      width: 497px;
+      height: 191px;
+      align-self: normal;
+      margin-top: 68px;
+    }
+
+    @include desktop {
+      margin-top: 52px;
+    }
+
+  }
+
+}

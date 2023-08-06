@@ -1,0 +1,64 @@
+@import "../../../assets/styles/app";
+
+.paperClip {
+  width: 238px;
+
+  .top {
+    position: relative;
+    width: 238px;
+    height: 168px;
+    box-sizing: border-box;
+    padding: 18px 19px 0;
+
+    .paperClip_body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .paperClip_text {
+      position: relative;
+      z-index: 2;
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 110%;
+      width: 162px;
+    }
+
+    .buttons {
+      position: relative;
+      z-index: 2;
+      margin-top: 31px;
+      display: flex;
+
+      a {
+        @include centerRow;
+        text-transform: uppercase;
+        text-decoration: none;
+        width: 82px;
+        height: 28px;
+        border-radius: 5px;
+        border: 1px solid #C9C89B;
+        color: #000;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 110%;
+        transition: 0.3s;
+
+        &:nth-child(2) {
+          margin-left: 36px;
+        }
+
+        &:hover {
+          border-color: #4f4e3e;
+        }
+
+
+      }
+    }
+  }
+}

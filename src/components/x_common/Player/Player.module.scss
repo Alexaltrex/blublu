@@ -1,0 +1,45 @@
+@import "../../../assets/styles/app";
+
+.player {
+  position: relative;
+  cursor: pointer;
+  width: 284px;
+  height: 146.581px;
+  box-sizing: border-box;
+
+  @include tablet {
+    width: 465px;
+    height: 240px;
+  }
+
+  .audio_back {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .control {
+    @include button;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: 4px;
+    left: 30px;
+
+    @include tablet {
+      width: 34px;
+      height: 36px;
+      bottom: 8px;
+      left: 52px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+
+
+}

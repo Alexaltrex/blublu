@@ -1,0 +1,1228 @@
+@import "../../assets/styles/app";
+
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  background-image: url(../../assets/png/home/background.png);
+  background-size: 1152px auto;
+  background-position-x: -72px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  @include tablet {
+    background-size: cover;
+    background-position-x: unset;
+    background-position: center;
+  }
+
+  .dots_mobile {
+    @include onlyMobileAndLess();
+    height: 647px;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .dots_tablet {
+    @include onlyTablet();
+    height: 586px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .dots_desktop {
+    @include onlyDesktopAndMore();
+    width: auto; //586px;
+    position: absolute;
+    z-index: 1;
+    top: -65px;
+    left: 0;
+    height: 100vh;
+    object-fit: cover;
+    object-position: right;
+  }
+
+  .gradient_mobile {
+    @include onlyMobileAndLess();
+    position: absolute;
+    top: 592px;
+    left: 0;
+    right: 0;
+    height: 58px;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+  }
+
+  .pepe {
+    position: absolute;
+  }
+
+  .pepe_mobile {
+    @include onlyMobileAndLess();
+    position: absolute;
+    width: auto;
+    height: 410px;
+    bottom: 209px;
+    right: 0;
+  }
+
+  .pepe_tablet {
+    @include onlyTablet();
+    position: absolute;
+    width: 857px;
+    height: 1044px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .pepe_desktop {
+    @include onlyDesktopAndMore();
+    position: absolute;
+    width: 857px;
+    height: 1044px;
+    bottom: 0;
+    right: 0;
+  }
+
+
+  .mobileContent {
+    @include onlyMobileAndLess(flex);
+    flex-direction: column;
+    padding: 16px 16px 88px;
+    box-sizing: border-box;
+  }
+
+  .tabletContent {
+    @include onlyTablet(flex);
+    flex-direction: column;
+    padding: 90px 0 12px;
+    position: relative;
+    z-index: 2;
+
+    &_row1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 54px;
+      padding-left: 19px;
+    }
+
+    &_row2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 26px 26px 9px 22px;
+    }
+  }
+
+  .desktopContent {
+    @include onlyDesktopAndMore(flex);
+    min-height: calc(100vh - 64px);
+    position: relative;
+    z-index: 2;
+
+    .rightPart {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .topRow {
+        display: flex;
+        justify-content: space-between;
+
+        &_right {
+          display: flex;
+        }
+      }
+
+      .bottomWrapper {
+        .bottomRow {
+          display: flex;
+          justify-content: space-between;
+          margin-top: -16px;
+          margin-left: 140px;
+          margin-right: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .buyNow {
+    align-self: flex-end;
+    display: block;
+    width: 95px;
+    height: 76px;
+
+    @include tablet {
+      align-self: normal;
+      width: 328px;
+      height: 261px;
+    }
+
+    &:hover {
+      img {
+        transform: scale(0.9);
+      }
+    }
+
+    img {
+      width: 95px;
+      height: 76px;
+      transition: 0.3s;
+
+      @include tablet {
+        width: 328px;
+        height: 261px;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+
+    @include tablet {
+      justify-content: space-between;
+      padding-left: 24px;
+      padding-right: 35px;
+      margin-top: 167px;
+    }
+
+    @include desktop {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0;
+      margin-top: 146px;
+      margin-left: 34px;
+
+    }
+
+    .link {
+
+      &:nth-child(1) {
+
+        img {
+          height: 62px;
+
+          @include tablet {
+            height: 230px;
+          }
+
+          @include desktop {
+            height: 268px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+
+        img {
+          height: 64px;
+
+          @include tablet {
+            height: 235px;
+          }
+
+          @include desktop {
+            height: 273px;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        img {
+          height: 50px;
+
+          @include tablet {
+            height: 184px;
+          }
+
+          @include desktop {
+            height: 214px;
+          }
+        }
+      }
+
+      &:not(:first-child) {
+        margin-left: 8px;
+
+        @include tablet {
+          margin-left: 0;
+        }
+      }
+
+      &:hover {
+        img {
+          transform: scale(0.9);
+        }
+      }
+
+
+      img {
+        display: block;
+        width: auto;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .form {
+    align-self: center;
+    margin-top: 18px;
+    position: relative;
+
+    @include tablet {
+      margin-top: 124px;
+    }
+
+    @include desktop {
+      margin-top: 23px;
+      margin-right: 19px;
+      margin-left: 184px;
+    }
+
+    .back {
+      display: block;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .label {
+        margin-top: 15px;
+        margin-left: 18px;
+        color: #FFF;
+        font-size: 14px;;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: uppercase;
+      }
+
+      .raised {
+        margin-top: 25px;
+        color: #000;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 110%;
+      }
+
+      .progress {
+        margin: 17px 20px 0;
+        border: 1px solid #939183;
+        background: #ECE9D8;
+        height: 27px;
+        border-radius: 999px;
+
+        .inner {
+          height: 100%;
+          border-radius: 999px;
+          background: repeating-linear-gradient(-45deg, #26D100, #26D100 6px, #20AB14 6px, #20AB14 12px);
+        }
+      }
+
+      .conversion {
+        margin-top: 5px;
+        color: #000;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 110%;
+      }
+
+      .rows {
+        position: relative;
+        margin-left: 28px;
+        margin-top: 7px;
+        margin-right: 24px;
+
+        .row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          &:nth-child(2) {
+            margin-top: 10px;
+          }
+
+          .rowLabel {
+            color: #0055E8;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 110%;
+            text-transform: uppercase;
+            white-space: nowrap;
+          }
+
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+          }
+
+          input[type=number] {
+            -moz-appearance: textfield; /* Firefox */
+          }
+
+          .field {
+            width: 144px;
+            height: 19px;
+            box-sizing: border-box;
+            padding-right: 6px;
+            border: 1px solid #989EA2;
+            background: #FFF;
+            outline: none;
+
+            color: #000;
+            text-align: right;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 110%;
+
+
+          }
+        }
+
+        .equal {
+          position: absolute;
+          top: 12px;
+          left: 60px;
+          color: #0055E8;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 110%;
+        }
+      }
+
+      .course {
+        margin-top: 10px;
+        color: #000;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 110%;
+      }
+
+      .submit {
+        @include button;
+        @include centerRow;
+        position: relative;
+        width: 179px;
+        height: 34px;
+        box-sizing: border-box;
+        margin: 10px auto 0;
+        border-radius: 6px;
+        border: 2px solid #2C6293;
+        background: #F1F1EC;
+        transition: 0.3s;
+
+        &:hover {
+          background: #e7e7dd;
+        }
+
+        &:after {
+          position: absolute;
+          display: block;
+          content: "";
+          top: 3px;
+          bottom: 3px;
+          left: 3px;
+          right: 3px;
+          border: 1px dashed #989A97;
+          border-radius: 3px;
+        }
+
+        span {
+          color: #000;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%;
+          text-transform: uppercase;
+        }
+      }
+
+      .notEnough {
+        display: block;
+        margin: 10px auto 0;
+        color: #0055E8;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 110%;
+        text-decoration-line: underline;
+      }
+
+    }
+  }
+
+  .spam {
+    width: 282px;
+    height: 237px;
+    position: relative;
+    margin: 24px auto 0;
+    //border: 1px solid red;
+
+    @include tablet {
+      width: 389px;
+      height: 327px;
+    }
+
+    @include desktop {
+      margin: 0;
+    }
+
+    .popup {
+      position: absolute;
+
+      &_1 {
+        top: 42px;
+        left: 0;
+        z-index: 3;
+      }
+
+      &_3 {
+        top: 20px;
+        right: 0;
+        z-index: 1;
+      }
+
+      .header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 234px;
+        height: 31.172px;
+        box-sizing: border-box;
+        padding-left: 13px;
+        padding-right: 8px;
+
+        @include tablet {
+          width: 323px;
+          height: 43px;
+          padding-left: 18px;
+          padding-right: 8px;
+        }
+
+        .popup1_header_mobile {
+          @include onlyMobileAndLess();
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+        }
+
+        .popup1_header_tablet {
+          //background: #2C6293;
+          @include onlyTabletAndMore();
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          width: 323px;
+          height: 43px;
+
+          svg {
+            width: 323px;
+            height: 43px;
+          }
+        }
+
+        .title {
+          position: relative;
+          z-index: 2;
+          color: #FFF;
+          font-size: 13.049px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%;
+
+          @include tablet {
+            font-size: 18px;
+          }
+        }
+
+        .close_spam_popup1_mobile {
+          @include onlyMobileAndLess();
+          position: relative;
+          z-index: 2;
+          width: 18.848px;
+          height: 18.848px;
+        }
+
+        .close_spam_popup1_tablet {
+          @include onlyTabletAndMore();
+          position: relative;
+          z-index: 2;
+        }
+      }
+
+      .content {
+        width: 234px;
+        height: 165.278px;
+        box-sizing: border-box;
+        border: 2px solid #004DE3;
+        background: #ECE9D8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4px 0 8px;
+
+        @include tablet {
+          width: 323px;
+          height: 228px;
+          padding: 6px 0 11px;
+        }
+
+        .congradulatuions {
+          background: linear-gradient(90deg, #5858F9 0%, rgba(88, 88, 249, 0.00) 100%);
+          color: #FFF;
+          font-size: 13.049px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 110%;
+          text-transform: uppercase;
+          padding: 2px 26px 2px 14px;
+
+          @include tablet {
+            padding: 3px 34px 3px 19px;
+            font-size: 18px
+          }
+        }
+
+        .smile {
+          display: block;
+          margin: 8px auto 0;
+          width: 47.846px;
+          height: 47.846px;
+
+          @include tablet {
+            width: 66px;
+            height: 66px;
+          }
+        }
+
+        .text {
+          margin-top: 6px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include tablet {
+            margin-top: 8px;
+          }
+
+          p {
+            color: #000;
+            text-align: center;
+            font-size: 13.049px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%;
+            text-transform: uppercase;
+
+            @include tablet {
+              font-size: 18px;
+            }
+
+            span {
+              vertical-align: super;
+              text-transform: none;
+              font-size: 10px;
+
+              @include tablet {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .btn {
+          @include button;
+          @include centerRow;
+          margin: 10px auto 0;
+          display: block;
+          width: 102.941px;
+          height: 21.748px;
+          border-radius: 0.725px;
+          border: 0.725px solid #639A55;
+          background: linear-gradient(180deg, #77E25B 0%, #4BE624 7.90%, #24D000 9.56%, #2BD401 60.83%, #24AC03 61.73%, #22AC01 100%);
+
+          @include tablet {
+            width: 142px;
+            height: 30px;
+          }
+
+          p {
+            color: #FFF;
+            text-align: center;
+            font-size: 11.599px;
+            font-weight: 400;
+            line-height: 110%;
+            text-decoration-line: underline;
+
+            @include tablet {
+              font-size: 16px;
+            }
+          }
+        }
+
+
+      }
+
+    }
+
+    .popup2 {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 18px;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 188.483px;
+        height: 21.748px;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 6px;
+
+        @include tablet {
+          width: 260px;
+          height: 30px;
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+
+        .popup2_header_mobile {
+          @include onlyMobileAndLess();
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+        }
+
+        .popup2_header_tablet {
+          @include onlyTabletAndMore();
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+        }
+
+        .title {
+          position: relative;
+          z-index: 2;
+          color: #FFF;
+          font-family: Arial;
+          font-size: 13.049px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%;
+
+          @include tablet {
+            font-size: 18px;
+          }
+        }
+
+        .close_spam_popup2_mobile {
+          position: relative;
+          z-index: 2;
+          @include onlyMobileAndLess();
+          width: 13.774px;
+          height: 13.774px;
+        }
+
+        .close_spam_popup2_tablet {
+          position: relative;
+          z-index: 2;
+          @include onlyTabletAndMore();
+          width: 19px;
+          height: 19px;
+        }
+
+      }
+
+      .content {
+        border: 2px solid #004DE3;
+        background: #ECE9D8;
+        width: 188.483px;
+        height: 84.817px;
+        box-sizing: border-box;
+        padding: 6px 16px 0;
+
+        @include tablet {
+          width: 260px;
+          height: 117px;
+          padding: 8px 23px 0;
+        }
+
+        .top {
+          display: flex;
+
+          .mail {
+            display: block;
+            width: 24.648px;
+            height: 24.648px;
+
+            @include tablet {
+              width: 34px;
+              height: 34px;
+            }
+          }
+
+
+          .text {
+            margin-left: 10px;
+            color: #000;
+            font-size: 10.149px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%;
+
+            @include tablet {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .buttons {
+          margin-top: 12px;
+          display: flex;
+          justify-content: center;
+        }
+
+
+      }
+    }
+  }
+
+  .watchVideo {
+    position: relative;
+    margin: 48px auto 0;
+    //border: 1px solid red;
+    box-sizing: border-box;
+    width: 295px;
+    height: 407px;
+
+    @include tablet {
+      margin: 24px auto 0;
+      width: 894px;
+      height: 309px;
+    }
+
+    @include desktop {
+      margin: 21px 0 0 60px;
+    }
+
+
+    .watchVideoItem {
+      position: absolute;
+
+      &_0 {
+        top: 138px;
+        left: 22px;
+        z-index: 4;
+      }
+
+      &_1 {
+        top: 45px;
+        left: 36px;
+        z-index: 3;
+      }
+
+      &_2 {
+        top: 99px;
+        left: 0;
+        z-index: 2;
+      }
+
+      &_3 {
+        top: 0;
+        left: 6px;
+        z-index: 1;
+      }
+
+      .header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 259px;
+        height: 43px;
+        padding-left: 18px;
+        padding-right: 8px;
+        box-sizing: border-box;
+
+        @include tablet {
+          width: 838px;
+          height: 43px;
+        }
+
+        .watchVideo_header_mobile {
+          @include onlyMobileAndLess;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        .watchVideo_header_tablet {
+          @include onlyTabletAndMore;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 838px;
+          height: 43px;
+          z-index: 1;
+
+          svg {
+            width: 838px;
+            height: 43px;
+          }
+        }
+
+        .title_mobile, .title_tablet {
+          position: relative;
+          z-index: 2;
+          color: #FFF;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 110%;
+        }
+
+        .title_mobile {
+          @include onlyMobileAndLess;
+        }
+
+        .title_tablet {
+          @include onlyTabletAndMore(flex);
+        }
+
+        .close {
+          display: block;
+          width: 28px;
+          height: 28px;
+          position: relative;
+          z-index: 3;
+        }
+      }
+
+      .content {
+        box-sizing: border-box;
+        border: 2px solid #004DE3;
+        background: #ECE9D8;
+        width: 259px;
+        height: 228px;
+
+        @include tablet {
+          width: 838px;
+          height: 155px;
+        }
+
+        .top {
+          display: flex;
+          padding: 20px 20px 0;
+
+          @include tablet {
+            padding: 25px 25px 0;
+          }
+
+          .alert {
+            display: block;
+            width: 40px;
+            height: 35px;
+
+            @include tablet {
+              width: 40px;
+              height: 35px;
+            }
+          }
+
+          .text {
+            margin-left: 15px;
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 110%;
+
+            @include tablet {
+              margin-top: 2px;
+              font-size: 28px;
+              margin-left: 25px;
+            }
+          }
+
+        }
+
+        .buttons {
+          margin-top: 21px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include tablet {
+            margin-top: 25px;
+            flex-direction: row;
+            justify-content: center;
+          }
+
+          &_btn {
+            @include button;
+            @include centerRow;
+            position: relative;
+            border-radius: 12px;
+            border: 2px solid #2C6293;
+            background: #F1F1EC;
+            width: 218px;
+            height: 48px;
+
+            @include tablet {
+              width: 258px;
+            }
+
+            &:nth-child(2) {
+              margin-top: 8px;
+
+              @include tablet {
+                margin-top: 0;
+                margin-left: 12px;
+
+              }
+            }
+
+            &:after {
+              position: absolute;
+              content: "";
+              display: block;
+              top: 4px;
+              bottom: 4px;
+              left: 4px;
+              right: 4px;
+              border-radius: 3px;
+              border: 1px dashed #989A97;
+
+              @include tablet {
+                top: 5px;
+                bottom: 5px;
+                left: 5px;
+                right: 5px;
+              }
+            }
+
+            & > p {
+              color: #000;
+              text-align: center;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 110%;
+              text-transform: uppercase;
+
+              @include tablet {
+                font-size: 16px;
+              }
+            }
+
+          }
+
+
+        }
+      }
+
+    }
+
+
+  }
+
+  .socials {
+    align-self: center;
+    margin-top: 40px;
+
+    @include tablet {
+      align-self: normal;
+      margin-top: 100px;
+    }
+
+    @include desktop {
+      margin-top: 23px;
+    }
+
+  }
+
+  .player {
+    margin: 372px auto 0;
+
+    @include tablet {
+      margin: 72px 0 0 28px;
+    }
+
+    @include desktop {
+      margin-top: 110px;
+    }
+  }
+
+}
+
+.modal {
+  //background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(15px);
+  @include centerRow;
+
+  .modalContent {
+    width: 100vw;
+    height: auto;
+    position: relative;
+
+    @include tablet {
+      width: 1032px;
+    }
+
+    @include desktop {
+      width: 1374px;
+    }
+
+    .player_window {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .videoWrapper {
+      position: absolute;
+      //border: 2px solid red;
+      box-sizing: border-box;
+      top: 7.0vw;
+      height: 58vw;
+      left: 0.5vw;
+      width: 98.4vw;
+
+      @include tablet {
+        width: 1016.978px;
+        height: 594.114px;
+        top: 82px;
+        left: 5px;
+      }
+
+      @include desktop {
+        top: 110px;
+        height: 791px;
+        left: 7px;
+        width: 1354px;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .play {
+      @include button;
+      position: absolute;
+      width: 3.8vw;
+      height: 4.4vw;
+      top: 65.8vw;
+      left: 48.1vw;
+      border-radius: 50%;
+
+      @include tablet {
+        width: 39.808px;
+        height: 45.066px;
+        top: 680px;
+        left: 496px;
+      }
+
+      @include desktop {
+        width: 53px;
+        height: 60px;
+        top: 906px;
+        left: 660px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 3vw;
+
+        path {
+          fill: #FFF;
+          stroke: #FFF;
+        }
+      }
+
+      &_play {
+        svg {
+          transform: translate(-47%, -50%);
+        }
+      }
+
+      &_pause {
+        svg {
+          path {
+            stroke-width: 5;
+          }
+        }
+      }
+
+    }
+
+    .close {
+      @include button;
+      position: absolute;
+      top: 0.6vw; //2px;
+      height: 2.2vw; //7px;
+      right: 1.25vw; //4px;
+      width: 2.2vw; //7px;
+
+      @include tablet {
+        width: 20px;
+        height: 20px;
+        top: 7px;
+        right: 14px;
+      }
+
+      @include desktop {
+        width: 26px;
+        height: 26px;
+        top: 9px;
+        right: 19px;
+      }
+
+      img {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+
+}

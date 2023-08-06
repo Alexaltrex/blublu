@@ -1,0 +1,64 @@
+@import "../../assets/styles/app";
+
+.header {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  height: 32px;
+
+  @include tablet {
+    height: 64px;
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1768px;
+
+    @include tablet {
+      width: 3663px;
+    }
+  }
+
+  .row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &_2 {
+      transform: translateX(-100%);
+    }
+
+    p {
+      // mobile
+      // 126 36 => 162
+      // 11 x 162 = 1768
+
+      // desktop
+      // 253 80 => 333
+      // 11 x 333 = 3663
+      color: #FFF;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 110%;
+      text-transform: uppercase;
+      margin-left: 36px;
+      white-space: nowrap;
+
+      @include tablet {
+        font-size: 36px;
+        margin-left: 80px;
+      }
+
+
+    }
+  }
+
+}
+
+

@@ -1,0 +1,440 @@
+@import "../../assets/styles/app";
+
+.tokenomics {
+  position: relative;
+  background: #000;
+
+  .title {
+    position: absolute;
+    z-index: 3;
+    width: 295px;
+    height: 161px;
+    top: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include tablet {
+      width: 493px;
+      height: 270px;
+      top: 179px;
+      left: 48px;
+      transform: none;
+    }
+
+    @include desktop {
+      top: 188px;
+      left: 36px;
+    }
+
+  }
+
+  .port {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 550px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top right;
+
+    @include tablet {
+      height: 100%;
+      object-position: center;
+    }
+  }
+
+  .gradient_port_bottom {
+    @include onlyMobileAndLess();
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 390px;
+    height: 160px;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+  }
+
+  .gradient_space_top {
+    @include onlyMobileAndLess();
+    position: absolute;
+    top: 536px;
+    height: 118px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+  }
+
+  .gradient_space_bottom {
+    @include onlyMobileAndLess();
+    position: absolute;
+    top: 1511px;
+    height: 118px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+  }
+
+  .space {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 536px;
+    height: 1093px;
+    object-fit: cover;
+
+    @include tablet {
+      top: 0;
+      height: 100%;
+    }
+  }
+
+  .mobile_bottom_blur {
+    @include onlyMobileAndLess();
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 573px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .dots_tablet {
+    @include onlyTablet();
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .dots_desktop {
+    @include onlyDesktopAndMore();
+    width: auto; //586px;
+    position: absolute;
+    z-index: 2;
+    top: -65px;
+    left: 0;
+    height: 100vh;
+    object-fit: cover;
+    object-position: right;
+  }
+
+  .portal_frog {
+    width: 216px;
+    height: 435px;
+    position: absolute;
+    z-index: 4;
+    top: 164px;
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+
+    @include tablet {
+      width: 429px;
+      height: 868px;
+      top: 462px;
+      left: calc(50% + 65px);
+    }
+
+    @include desktop {
+      width: 289px;
+      height: 584px;
+      top: 177px;
+      left: calc(50% + 65px);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+
+  .mobileContent {
+    @include onlyMobileAndLess(flex);
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 85px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .tabletContent {
+    @include onlyTablet(flex);
+    justify-content: space-between;
+    padding-bottom: 42px;
+    position: relative;
+    z-index: 2;
+
+    .leftColumn {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .rightColumn {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+    }
+  }
+
+  .desktopContent {
+    @include onlyDesktopAndMore(flex);
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: calc(100vh - 64px);
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+
+    &_leftColumns {
+      display: flex;
+
+      .leftColumns_first {
+
+      }
+
+      .leftColumns_second {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &_rightColumns {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+    }
+  }
+
+  .player {
+    position: relative;
+    z-index: 5;
+    margin-top: 536px;
+
+    @include tablet {
+      margin-top: 420px;
+      margin-right: 45px;
+    }
+
+    @include desktop {
+      margin-top: 44px;
+      margin-left: 36px;
+    }
+  }
+
+  .presale60 {
+    margin-top: 32px;
+    width: 260px;
+    height: 201.95px;
+
+    @include tablet {
+      width: 318px;
+      height: 247px;
+      margin-top: 520px;
+      margin-left: 47px;
+    }
+
+    @include desktop {
+      margin-top: 451px;
+      margin-left: 109px;
+    }
+  }
+
+  .liquidity {
+    width: 260px;
+    height: 130.926px;
+    margin-top: 60px;
+
+    @include tablet {
+      width: 421px;
+      height: 212px;
+      margin-top: 54px;
+      margin-left: 47px;
+    }
+
+    @include desktop {
+      margin-top: 55px;
+      margin-left: -40px;
+    }
+  }
+
+  .cd {
+    position: relative;
+    width: 275.354px;
+    height: 289px;
+    margin-top: 10px;
+
+    @include tablet {
+      width: 542px;
+      height: 408px;
+      position: absolute;
+      bottom: 44px;
+      right: 36px;
+    }
+
+    @include desktop {
+      position: relative;
+      bottom: 0;
+      right: 0;
+      margin-top: 16px;
+      margin-right: 30px;
+    }
+
+    .disc {
+      width: 188px;
+      height: 188px;
+
+      @include tablet {
+        width: 367px;
+        height: 367px;
+      }
+    }
+
+    .girlWrapper1,
+    .girlWrapper2 {
+      position: absolute;
+      width: 214.625px;
+      height: 194.285px;
+
+      @include tablet {
+        width: 306px;
+        height: 277px;
+      }
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .girlWrapper1 {
+      bottom: 0;
+      right: 0;
+    }
+
+    .girlWrapper2 {
+      bottom: 11px;
+      right: 20px;
+    }
+  }
+
+  .staking {
+    width: 260px;
+    height: 162.967px;
+    margin-top: 42px;
+    position: relative;
+    z-index: 5;
+
+    @include tablet {
+      width: 418px;
+      height: 262px;
+      margin-top: 54px;
+      margin-left: 47px;
+    }
+
+    @include desktop {
+      margin-top: 42px;
+      margin-left: 34px;
+    }
+  }
+
+  .totalSupply {
+    width: 223.152px;
+    height: 220px;
+    margin-top: 40px;
+    transform: translateX(-50px);
+
+    @include tablet {
+      width: 352px;
+      height: 347px;
+      margin-top: 91px;
+      margin-right: 46px;
+      transform: none;
+    }
+  }
+
+  .virus {
+    position: relative;
+    z-index: 2;
+    margin-top: -28px;
+    width: 296px;
+    height: auto;
+
+    @include tablet {
+      width: 562px;
+      margin-top: 53px;
+      margin-left: 32px;
+    }
+
+    @include desktop {
+      margin-top: 32px;
+      margin-left: 48px;
+    }
+  }
+
+  .buySellTax {
+    width: 260px;
+    height: 152.551px;
+    margin-top: 40px;
+
+    @include tablet {
+      width: 392px;
+      height: 230px;
+      margin-top: 54px;
+      margin-left: 47px;
+    }
+
+    @include desktop {
+      position: absolute;
+      margin-top: 0;
+      margin-left: 0;
+      bottom: 20px;
+      right: 605px;
+    }
+  }
+
+  .mathNerd {
+    width: 283px;
+    height: 36.774px;
+    margin-top: 42px;
+
+    @include tablet {
+      width: 354px;
+      height: 46px;
+      margin-top: 38px;
+      margin-right: 46px;
+    }
+
+    @include desktop {
+      margin-top: 30px;
+      margin-right: 42px;
+    }
+  }
+
+  .paperClip {
+    margin-top: 54px;
+
+    @include tablet {
+      position: absolute;
+      margin-top: 0;
+      top: 411px;
+      left: 386px;
+    }
+
+    @include desktop {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin-top: 17px;
+      margin-left: -40px;
+    }
+  }
+
+}

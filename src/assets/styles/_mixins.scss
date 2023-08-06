@@ -1,0 +1,112 @@
+//========= BREAK POINTS ===========//
+// [320...1080) - mobile
+// [1080...1920) - tablet
+// [1920...) - desktop
+
+@mixin tablet {
+  @media all and (min-width: 1080px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media all and (min-width: 1920px) {
+    @content;
+  }
+}
+
+// (...less, mobile]
+@mixin onlyMobileAndLess($displayType: block) {
+  display: $displayType;
+  @content;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+// (...less, mobile, tablet]
+@mixin onlyMobileAndTabletAndLess($displayType: block) {
+  display: $displayType;
+  @content;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+// [tablet]
+@mixin onlyTablet($displayType: block) {
+  display: none;
+
+  @include tablet {
+    display: $displayType;
+    @content;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+// [tablet, desktop, ...more)
+@mixin onlyTabletAndMore($displayType: block) {
+  display: none;
+
+  @include tablet {
+    display: $displayType;
+    @content;
+  }
+}
+
+// [desktop, ...more)
+@mixin onlyDesktopAndMore($displayType: block) {
+  display: none;
+
+  @include desktop {
+    display: $displayType;
+    @content;
+  }
+}
+
+//========= OTHER ===========//
+@mixin centerColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin container {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+
+
