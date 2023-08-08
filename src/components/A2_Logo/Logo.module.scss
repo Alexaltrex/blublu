@@ -1,4 +1,4 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .logo {
   position: absolute;
@@ -23,6 +23,12 @@
     transform: none;
   }
 
+  @media (max-width: 1919px) {
+    top: 12.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .inner {
     position: relative;
     transform-origin: center;
@@ -33,7 +39,6 @@
       left: 50%;
       top: calc(50% - 0px);
       transform: translate(-50%, -50%);
-
 
       @include tablet {
         //top: calc(50% - 15px);
@@ -47,6 +52,10 @@
 
         @include tablet {
           width: 270px;
+        }
+
+        @media (max-width: 1919px) {
+          width: 19.2rem;
         }
 
         &:hover {

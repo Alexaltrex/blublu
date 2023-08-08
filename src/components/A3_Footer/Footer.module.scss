@@ -1,4 +1,4 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .footer {
   @include onlyMobileAndLess(flex);
@@ -10,12 +10,20 @@
   bottom: 26px;
   right: 0;
 
+  @media (max-width: 1919px) {
+    bottom: 1.857rem;
+    display: none;
+  }
 
   .link {
     display: block;
 
     &:not(:first-child) {
       margin-left: 10px;
+
+      @media (max-width: 1919px) {
+        margin-left: 0.714rem;
+      }
     }
 
     img {
@@ -26,6 +34,11 @@
       & > img {
         width: 56.455px;
         height: 32.76px;
+
+        @media (max-width: 1919px) {
+          width: 4rem;
+          height: 2.28rem;
+        }
       }
     }
 
@@ -33,6 +46,11 @@
       & > img {
         width: 56.528px;
         height: 38.115px;
+
+        @media (max-width: 1919px) {
+          width: 4rem;
+          height: 2.714rem;
+        }
       }
     }
 
@@ -40,6 +58,11 @@
       & > img {
         width: 54.135px;
         height: 38.826px;
+
+        @media (max-width: 1919px) {
+          width: 3.85rem;
+          height: 2.714rem;
+        }
       }
     }
 
@@ -47,6 +70,11 @@
       & > img {
         width: 58.622px;
         height: 30.435px;
+
+        @media (max-width: 1919px) {
+          width: 4.14rem;
+          height: 2.14rem;
+        }
       }
     }
   }

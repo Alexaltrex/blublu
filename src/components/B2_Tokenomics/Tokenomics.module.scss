@@ -1,4 +1,4 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .tokenomics {
   position: relative;
@@ -21,11 +21,18 @@
       transform: none;
     }
 
+    @media (max-width: 1919px) {
+      width: 35.214rem;
+      height: 19.285rem;
+      top: 12.785rem;
+      left: 3.428rem;
+      transform: none;
+    }
+
     @include desktop {
       top: 188px;
       left: 36px;
     }
-
   }
 
   .port {
@@ -41,6 +48,11 @@
       height: 100%;
       object-position: center;
     }
+
+    @media (max-width: 1919px) {
+      height: 100%;
+      object-position: center;
+    }
   }
 
   .gradient_port_bottom {
@@ -50,7 +62,11 @@
     width: 100%;
     top: 390px;
     height: 160px;
-    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+
+    @media (max-width: 1919px) {
+      font: none !important;
+    }
   }
 
   .gradient_space_top {
@@ -60,7 +76,11 @@
     height: 118px;
     left: 0;
     width: 100%;
-    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+
+    @media (max-width: 1919px) {
+      display: none !important;
+    }
   }
 
   .gradient_space_bottom {
@@ -70,7 +90,11 @@
     height: 118px;
     left: 0;
     width: 100%;
-    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+
+    @media (max-width: 1919px) {
+      display: none !important;
+    }
   }
 
   .space {
@@ -82,6 +106,11 @@
     object-fit: cover;
 
     @include tablet {
+      top: 0;
+      height: 100%;
+    }
+
+    @media (max-width: 1919px) {
       top: 0;
       height: 100%;
     }
@@ -97,6 +126,10 @@
     height: 573px;
     object-fit: cover;
     object-position: top;
+
+    @media (max-width: 1919px) {
+      display: none !important;
+    }
   }
 
   .dots_tablet {
@@ -107,6 +140,10 @@
     left: 0;
     width: 100%;
     height: auto;
+
+    @media (max-width: 1919px) {
+      display: block !important;
+    }
   }
 
   .dots_desktop {
@@ -137,6 +174,13 @@
       left: calc(50% + 65px);
     }
 
+    @media (max-width: 1919px) {
+      width: 30.642rem;
+      height: 62rem;
+      top: 33rem;
+      left: calc(50% + 4.642rem);
+    }
+
     @include desktop {
       width: 289px;
       height: 584px;
@@ -150,8 +194,6 @@
     }
   }
 
-
-
   .mobileContent {
     @include onlyMobileAndLess(flex);
     flex-direction: column;
@@ -159,6 +201,10 @@
     padding-bottom: 85px;
     position: relative;
     z-index: 5;
+
+    @media (max-width: 1919px) {
+      display: none !important;
+    }
   }
 
   .tabletContent {
@@ -167,6 +213,11 @@
     padding-bottom: 42px;
     position: relative;
     z-index: 2;
+
+    @media (max-width: 1919px) {
+      display: flex !important;
+      padding-bottom: 3rem;
+    }
 
     .leftColumn {
       display: flex;
@@ -196,7 +247,6 @@
       display: flex;
 
       .leftColumns_first {
-
       }
 
       .leftColumns_second {
@@ -223,6 +273,11 @@
       margin-right: 45px;
     }
 
+    @media (max-width: 1919px) {
+      margin-top: 30rem;
+      margin-right: 3.214rem;
+    }
+
     @include desktop {
       margin-top: 44px;
       margin-left: 36px;
@@ -241,6 +296,13 @@
       margin-left: 47px;
     }
 
+    @media (max-width: 1919px) {
+      width: 22.714rem;
+      height: 17.642rem;
+      margin-top: 37.14rem;
+      margin-left: 3.357rem;
+    }
+
     @include desktop {
       margin-top: 451px;
       margin-left: 109px;
@@ -257,6 +319,13 @@
       height: 212px;
       margin-top: 54px;
       margin-left: 47px;
+    }
+
+    @media (max-width: 1919px) {
+      width: 30.07rem;
+      height: 15.142rem;
+      margin-top: 3.857rem;
+      margin-left: 3.357rem;
     }
 
     @include desktop {
@@ -279,6 +348,15 @@
       right: 36px;
     }
 
+    @media (max-width: 1919px) {
+      width: 38.714rem;
+      height: 29.142rem;
+      position: absolute;
+      bottom: 3.14rem;
+      right: 2.57rem;
+      margin-top: 0.714rem;
+    }
+
     @include desktop {
       position: relative;
       bottom: 0;
@@ -295,6 +373,11 @@
         width: 367px;
         height: 367px;
       }
+
+      @media (max-width: 1919px) {
+        width: 26.214rem;
+        height: 26.214rem;
+      }
     }
 
     .girlWrapper1,
@@ -306,6 +389,11 @@
       @include tablet {
         width: 306px;
         height: 277px;
+      }
+
+      @media (max-width: 1919px) {
+        width: 21.857rem;
+        height: 19.785rem;
       }
 
       & > img {
@@ -322,6 +410,11 @@
     .girlWrapper2 {
       bottom: 11px;
       right: 20px;
+
+      @media (max-width: 1919px) {
+        bottom: 0.785rem;
+        right: 1.428rem;
+      }
     }
   }
 
@@ -337,6 +430,13 @@
       height: 262px;
       margin-top: 54px;
       margin-left: 47px;
+    }
+
+    @media (max-width: 1919px) {
+      width: 29.857rem;
+      height: 18.714rem;
+      margin-top: 3.857rem;
+      margin-left: 3.357rem;
     }
 
     @include desktop {
@@ -358,6 +458,14 @@
       margin-right: 46px;
       transform: none;
     }
+
+    @media (max-width: 1919px) {
+      width: 25.142rem;
+      height: 24.785rem;
+      margin-top: 6.5rem;
+      margin-right: 3.285rem;
+      transform: none;
+    }
   }
 
   .virus {
@@ -371,6 +479,12 @@
       width: 562px;
       margin-top: 53px;
       margin-left: 32px;
+    }
+
+    @media (max-width: 1919px) {
+      width: 34.4rem;
+      margin-top: 3.785rem;
+      margin-left: 2.285rem;
     }
 
     @include desktop {
@@ -389,6 +503,13 @@
       height: 230px;
       margin-top: 54px;
       margin-left: 47px;
+    }
+
+    @media (max-width: 1919px) {
+      width: 28rem;
+      height: 16.428rem;
+      margin-top: 3.857rem;
+      margin-left: 3.357rem;
     }
 
     @include desktop {
@@ -412,6 +533,13 @@
       margin-right: 46px;
     }
 
+    @media (max-width: 1919px) {
+      width: 25.285rem;
+      height: 3.328rem;
+      margin-top: 2.7rem;
+      margin-right: 3.285rem;
+    }
+
     @include desktop {
       margin-top: 30px;
       margin-right: 42px;
@@ -428,6 +556,13 @@
       left: 386px;
     }
 
+    @media (max-width: 1919px) {
+      position: absolute;
+      margin-top: 0;
+      top: 29.357rem;
+      left: 27.57rem;
+    }
+
     @include desktop {
       position: relative;
       top: 0;
@@ -436,5 +571,4 @@
       margin-left: -40px;
     }
   }
-
 }

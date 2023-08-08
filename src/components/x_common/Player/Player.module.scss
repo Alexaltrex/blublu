@@ -1,4 +1,4 @@
-@import "../../../assets/styles/app";
+@import '../../../assets/styles/app';
 
 .player {
   position: relative;
@@ -10,6 +10,11 @@
   @include tablet {
     width: 465px;
     height: 240px;
+  }
+
+  @media (max-width: 1919px) {
+    width: 33.214rem;
+    height: 17.14rem;
   }
 
   .audio_back {
@@ -26,6 +31,13 @@
     bottom: 4px;
     left: 30px;
 
+    @media (max-width: 1919px) {
+      width: 1.71rem;
+      height: 1.71rem;
+      bottom: 0.28rem;
+      left: 2.14rem;
+    }
+
     @include tablet {
       width: 34px;
       height: 36px;
@@ -37,9 +49,5 @@
       width: 100%;
       height: 100%;
     }
-
   }
-
-
-
 }
