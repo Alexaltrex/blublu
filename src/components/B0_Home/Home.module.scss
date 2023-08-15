@@ -111,6 +111,14 @@
       display: block !important;
       height: 61.2rem;
       width: 74.5rem;
+      transform: scale(0.75);
+      bottom: -8.5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 
@@ -170,7 +178,7 @@
       margin: 26px 26px 9px 22px;
 
       @media (max-width: 1919px) {
-        margin: 1.85rem 1.85rem 7.64rem 1.57rem;
+        margin: 1.85rem 1.85rem -2rem 1.57rem;
       }
     }
   }
@@ -374,6 +382,8 @@
       flex: 0 0 auto;
       width: 20rem;
       margin-top: 8.85rem;
+      margin-left: 2.5rem;
+      transform: scale(1.25);
     }
 
     .back {
@@ -655,6 +665,7 @@
       width: 27.78rem;
       height: 23.35rem;
       margin: 1.71rem auto 0;
+      transform: scale(0.75);
     }
 
     @include tablet {
@@ -1160,6 +1171,7 @@
       margin: 1.71rem auto 0;
       width: 63.85rem;
       height: 22.07rem;
+      transform: scale(0.75);
     }
 
     .watchVideoItem {
@@ -1499,6 +1511,7 @@
 
     @media (max-width: 1919px) {
       margin-top: 7.14rem;
+      transform: scale(0.75);
     }
   }
 

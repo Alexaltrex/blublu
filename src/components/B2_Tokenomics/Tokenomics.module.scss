@@ -394,6 +394,7 @@
       @media (max-width: 1919px) {
         width: 21.857rem;
         height: 19.785rem;
+        transform: scale(0.75);
       }
 
       & > img {
@@ -485,6 +486,7 @@
       width: 34.4rem;
       margin-top: 3.785rem;
       margin-left: 2.285rem;
+      transform: scale(0.8);
     }
 
     @include desktop {
