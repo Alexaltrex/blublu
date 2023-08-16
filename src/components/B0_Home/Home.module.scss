@@ -468,9 +468,9 @@
         margin-right: 24px;
 
         @media (max-width: 1919px) {
-          margin-left: 2rem;
+          margin-left: 1.5rem;
           margin-top: 0.5rem;
-          margin-right: 1.71rem;
+          margin-right: 1.0rem;
         }
 
         .row {
@@ -490,7 +490,7 @@
             font-size: 18px;
             font-weight: 400;
             line-height: 110%;
-            text-transform: uppercase;
+            //text-transform: uppercase;
             white-space: nowrap;
 
             @media (max-width: 1919px) {

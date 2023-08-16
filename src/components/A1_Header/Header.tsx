@@ -1,28 +1,27 @@
 import * as React from "react";
 import style from "./Header.module.scss";
-import {useLayoutEffect, useRef} from "react";
+import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import {clsx} from "clsx";
 import gsap from "gsap";
-import {getColor} from "../../helpers";
-
+import {getColor} from "../../helpers/helpers";
 
 export const Header = () => {
+
     const appRef = useRef<HTMLDivElement>(null!);
     const duration = 10;
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
             gsap.timeline({repeat: -1})
-                .to(".row_1", { xPercent: 100, duration, ease: "none" })
-                .set(".row_1", { xPercent: -100 })
-                .to(".row_1", { xPercent: 0, duration, ease: "none" });
+                .to(".row_1", {xPercent: 100, duration, ease: "none"})
+                .set(".row_1", {xPercent: -100})
+                .to(".row_1", {xPercent: 0, duration, ease: "none"});
             gsap.timeline({repeat: -1})
-                .to(".row_2", { xPercent: 200, duration: 2 * duration, ease: "none" })
-                .set(".row_2", { xPercent: 0 });
+                .to(".row_2", {xPercent: 200, duration: 2 * duration, ease: "none"})
+                .set(".row_2", {xPercent: 0});
         }, appRef);
         return () => ctx.revert();
     }, [])
-
 
     return (
         <header className={style.header}

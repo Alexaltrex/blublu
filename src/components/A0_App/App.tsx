@@ -12,6 +12,8 @@ import {Roadmap} from "../B3_Roadmap/Roadmap";
 import song from "../../assets/mp3/song.mp3";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
+import {ConnectMetamask} from "../A4_ConnectMetamask/ConnectMetamask";
+import {CustomAlert} from "../x_common/CustomAlert/CustomAlert";
 
 export const App = observer(() => {
     const audioRef = useRef<HTMLAudioElement>(null!);
@@ -39,6 +41,8 @@ export const App = observer(() => {
             />
 
             <Header/>
+            <CustomAlert/>
+            <ConnectMetamask/>
             <Logo/>
             <main>
                 <Routes>
